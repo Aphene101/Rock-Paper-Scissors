@@ -9,3 +9,15 @@ function getComputerChoice() {
     }
 }
 
+function getHumanChoice(input){
+    if (input.toLowerCase() == "rock"){
+        return "Rock";
+    } else if (input.toLowerCase() == "paper"){
+        return "Paper";
+    } else if (input.toLowerCase() == "scissors"){
+        return "Scissors";
+    } else {
+        return "Invalid Answer";
+    }
+}
+
