@@ -33,3 +33,27 @@ function playRound(humanChoice, computerChoice){
     }
 }
 
+function playGame(){
+    let humanScore = 0;
+    let computerScore = 0;
+    for (let index = 0; index < 5; index++) {
+        input = prompt("Rock, Paper, Scissors?", "Rock");
+
+        let result = playRound(getHumanChoice(input), getComputerChoice());
+
+        console.log(result);
+
+        if (result.includes("You win")) {
+            humanScore++;
+        }
+
+        if(result.includes("You lose")) {
+            computerScore++;
+        }
+    }
+
+    console.log("Your Score: " + humanScore);
+    console.log("Computer's Score: " + computerScore);
+}
+
+playGame();
