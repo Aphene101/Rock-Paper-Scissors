@@ -21,3 +21,15 @@ function getHumanChoice(input){
     }
 }
 
+function playRound(humanChoice, computerChoice){
+    if (humanChoice == "Rock" && computerChoice == "Scissors" || 
+        humanChoice == "Paper" && computerChoice == "Rock" || 
+        humanChoice == "Scissors" && computerChoice == "Paper") {
+        return `You win! ${humanChoice} beats ${computerChoice}.`;
+    } else if (humanChoice == computerChoice) {
+        return `It's a Tie!`
+    } else {
+        return `You lose! ${computerChoice} beats ${humanChoice}.`
+    }
+}
+
