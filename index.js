@@ -5,7 +5,7 @@ function getComputerChoice() {
     } else if (result == 2){
         return "Paper";
     } else {
-        return "Scissors";
+        return "Scissors";x``
     }
 }
 
@@ -33,27 +33,10 @@ function playRound(humanChoice, computerChoice){
     }
 }
 
-function playGame(){
-    let humanScore = 0;
-    let computerScore = 0;
-    for (let index = 0; index < 5; index++) {
-        input = prompt("Rock, Paper, Scissors?", "Rock");
+const buttons = document.createElement("div");
+const rock = document.createElement("button");
+const paper = document.createElement("button");
+const scissors = document.createElement("button");
 
-        let result = playRound(getHumanChoice(input), getComputerChoice());
-
-        console.log(result);
-
-        if (result.includes("You win")) {
-            humanScore++;
-        }
-
-        if(result.includes("You lose")) {
-            computerScore++;
-        }
-    }
-
-    console.log("Your Score: " + humanScore);
-    console.log("Computer's Score: " + computerScore);
-}
-
-playGame();
+buttons.style.display = flex;
+buttons.appendChild([rock, paper, scissors]);
