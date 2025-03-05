@@ -44,7 +44,7 @@ scissors.textContent = "Scissors";
 
 buttons.style.display = "flex";
 buttons.style.width = "100%";
-buttons.style.height = "100vh";
+buttons.style.paddingTop = "25vh";
 buttons.style.justifyContent = "center";
 buttons.style.gap = "30px";
 buttons.style.alignItems = "center"
@@ -66,3 +66,24 @@ buttons.appendChild(scissors);
 const body = document.querySelector("body");
 
 body.appendChild(buttons);
+
+const scoreboard = document.createElement("div");
+const humanScore = document.createElement("p");
+const computerScore = document.createElement("p");
+
+Object.assign(scoreboard.style, {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    gap: "20px",
+    fontSize: "24px",
+    fontWeight: "bold",
+    marginTop: "20px"
+  });
+
+humanScore.textContent = "You : 0";
+computerScore.textContent = "Computer : 0";
+
+scoreboard.appendChild(humanScore);
+scoreboard.appendChild(computerScore);
+body.appendChild(scoreboard);
