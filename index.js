@@ -38,5 +38,31 @@ const rock = document.createElement("button");
 const paper = document.createElement("button");
 const scissors = document.createElement("button");
 
-buttons.style.display = flex;
-buttons.appendChild([rock, paper, scissors]);
+rock.textContent = "Rock";
+paper.textContent = "Paper";
+scissors.textContent = "Scissors";
+
+buttons.style.display = "flex";
+buttons.style.width = "100%";
+buttons.style.height = "100vh";
+buttons.style.justifyContent = "center";
+buttons.style.gap = "30px";
+buttons.style.alignItems = "center"
+
+rock.style.fontSize ="50px";
+rock.style.padding = "10px";
+rock.style.borderRadius = "10px";
+paper.style.fontSize ="50px";
+paper.style.padding = "10px";
+paper.style.borderRadius = "10px";
+scissors.style.fontSize ="50px";
+scissors.style.padding = "10px";
+scissors.style.borderRadius = "10px";
+
+buttons.appendChild(rock);
+buttons.appendChild(paper);
+buttons.appendChild(scissors);
+
+const body = document.querySelector("body");
+
+body.appendChild(buttons);
